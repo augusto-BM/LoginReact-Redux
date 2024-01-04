@@ -1,0 +1,77 @@
+//**********************   PARA HACER PRUEBAS TIPO REST CLIENT *******************
+
+###
+//*********************   PARA CREAR UN USUARIO   *************************
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Augusto",
+    "email": "augusto@gmail.com",
+    "password": "123",
+    "confPassword": "123",
+    "role": "admin"
+}
+
+###
+//*********************   PARA LISTAR TODOS LOS USUARIOS   *************************
+GET http://localhost:5000/users
+
+###
+//*********************   PARA LISTAR UN USUARIO   *************************
+GET http://localhost:5000/users/2df5c063-70bd-4621-b9c7-7e112508eac6
+
+###
+//*********************   PARA EDITAR UN USUARIO   *************************
+//PATCH http://localhost:5000/users/2df5c063-70bd-4621-b9c7-7e112508eac6
+//Content-Type: application/json
+
+//{
+    //"name": "Alvaro editado",
+    //"email": "alvaro@gmail.com",
+    //"password": "123",
+    //"confPassword": "123",
+    //"role": "user"
+//}
+
+###
+//*********************   PARA ELIMINAR UN USUARIO   *************************
+//DELETE http://localhost:5000/users/2df5c063-70bd-4621-b9c7-7e112508eac6
+
+###
+//*********************   PARA INICIAR UN USUARIO   *************************
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "augusto@gmail.com",
+    "password": "123"
+
+}
+
+###
+//***********   PARA VERIFICAR DATOS SI ESTOY LOGUEADO   *****************
+GET http://localhost:5000/me
+
+
+###
+//***********   PARA CERRAR SESION DE CUENT UN USUARIO LOGUEADO   *****************
+DELETE http://localhost:5000/logout
+
+
+//===============================================================================================================
+
+###
+//***********   PARA LISTAR DATOS TODOS LOS PRODUCTO   *****************
+GET http://localhost:5000/products
+
+###
+//*********************   PARA CREAR UN PRODUCTO   *************************
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "producto 6",
+    "price": "31"
+
+}
